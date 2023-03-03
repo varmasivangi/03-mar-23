@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://kit.fontawesome.com/785b2d9787.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+		body{
+			background: gray;
+		}
+		div{
+			width: 30%;
+			background: white;
+			margin: auto;
+			text-align: center;
+		}
+		div input{
+			margin:5% ;
+			padding: 2%;
+		}
+		div button{
+		width: 50%;
+		margin: 2%;
+		padding: 2%;
+		background-color: yellow;
+		color: black;
+		}
+	</style>
+</head>
+<body>
+<div>
+	<input type="" name="" placeholder="user name">
+
+	<input id="password" type="" name="" placeholder="password">
+	<i class="fa-solid fa-eye-low-vision"></i>
+
+	<button id="btn" onclick="change()">show</button>
+</div>
+
+
+<!-- 	<div id="parent"></div>
+	<div id="imagediv"></div> -->
+
+<script type="text/javascript">
+
+	function change(){
+
+		var passworddata=document.getElementById("password");
+
+		if(passworddata.type=="password"){
+
+			var s=passworddata.setAttribute("type","text")
+
+			passworddata.append(s)
+			document.getElementById("btn").innerHTML="hide"
+
+		}
+
+		else{
+
+			var s=passworddata.setAttribute("type","password")
+
+			passworddata.append(s)
+
+			document.getElementById("btn").innerHTML="show"
+		}
+	}
+
+	
+	/*var inputField = document.createElement("input")
+		inputField.setAttribute("placeholder","Enter here")
+	    document.getElementById("parent").append(inputField)
+
+	var paraField= document.createElement("p")
+	paraField.innerHTML="this is para"
+	document.getElementById("parent").append(paraField)
+
+	var image= document.createElement("img")
+		image.setAttribute("src","https://mobimg.b-cdn.net/v3/fetch/50/5081f28733ce69397d496a2dfdcedc2d.jpeg");
+		image.setAttribute("width","30%")
+
+		document.getElementById("imagediv").append(image)*/	
+</script>
+</body>
+</html>
